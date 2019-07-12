@@ -17,7 +17,7 @@ struct Home : View {
     var body: some View {
         NavigationView {
             VStack {
-                ScrollView(.horizontal) {
+                ScrollView(.horizontal, showsIndicators: false) {
                     PokemonList(pokemons: $pokemons, selectedPokemon: $selectedPokemon).frame(height: 300)
                 }.frame(height: 320)
                 SegmentedControl(selection: $selectedDetail){
